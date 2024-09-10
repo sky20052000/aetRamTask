@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "c2d3123a-e62c-4450-8509-c72c8059e2e5",
+		"name": "AetRam_task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17695013"
+	},
+	"item": [
+		{
+			"name": "bulk_upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csv",
+							"type": "file",
+							"src": "/C:/Users/Asus/Downloads/bulk_upload.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/user/bulk_upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"user",
+						"bulk_upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTemerature",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"city\":\"chennai\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/user/get_temp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"user",
+						"get_temp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSMA",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"city\":\"chennai\",\r\n    \"tempCount\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/user/get_sma",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"user",
+						"get_sma"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
